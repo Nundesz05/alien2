@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien</title>
+    <style>
+        body {
+            background-color: darkgoldenrod;
+        }
+        #aliens {
+            background-color: white;
+            border: 1px solid black;
+            width: 200px;
+            margin:  0px auto;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        a=1;
+        b=2;
+        c=3;
+        d=4;
+        function valt(id) {            
+            if(id==1) if (a<4) a++;  else a=1;
+            if(id==2) if(b<4) b++; else b=1;
+            if(id==3) if(c<4) c++; else c=1;
+            if(id==4) if(d<4) d++; else d=1;
+            if(id==1) {
+                document.getElementById("kep"+id).src="alien"+a+".png";
+            }
+            else if(id==2) {
+                document.getElementById("kep"+id).src="alien"+b+".png";
+            }
+            else if(id==3) {
+                document.getElementById("kep"+id).src="alien"+c+".png";
+            }
+            else if(id==4) {
+                document.getElementById("kep"+id).src="alien"+d+".png";
+            }
+            
+            
+        
+        }
+
+    </script>
+</head>
+<body>
+    <div id="aliens">
+        <img id="kep1" src="alien1.png" onclick="valt(1);">
+        <img id="kep2" src="alien2.png" onclick="valt(2);">
+        <img id="kep3" src="alien3.png" onclick="valt(3);">
+        <img id="kep4" src="alien4.png" onclick="valt(4);">
+    </div>
+</body>
+</html>
